@@ -1,0 +1,9 @@
+﻿<input @bind:event="oninput" @bind:get="SearchText" @bind:set="SearchTextChanged" />
+
+@code {
+    [Parameter]
+    public string SearchText { get; set; } = string.Empty;
+
+    [Parameter]
+    public EventCallback<string> SearchTextChanged { get; set; }
+}
